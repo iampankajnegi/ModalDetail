@@ -73,9 +73,22 @@ const ModalDetail = () => {
     return phone.length === 10 && /^\d+$/.test(phone);
   };
 
-  const validateDob = (dob) => {
-    // Simple date validation (additional checks can be added)
-    return  Date.now() < dob; 
+
+    const validateDob = (dob) => {
+    const dobDate = new Date(dob);
+    const currentDate = new Date();
+    const age = currentDate.getFullYear() - dobDate.getFullYear();
+    const monthDiff = currentDate.getMonth() - dobDate.getMonth();
+    const dayDiff = currentDate.getDate() - dobDate.getDate();
+    if (
+      isNaN(dobDate) ||
+      dobDate >= currentDate || 
+      age < 0 || 
+      (age === 0 && (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)))
+    ) {
+      return false;
+    }
+    return true;
   };
 
 
