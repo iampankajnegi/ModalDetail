@@ -83,34 +83,34 @@ const ModalDetail = () => {
 
   return (
     <div>
-         <div className="Modal" onClick={handleCloseModal}>
+         <div className="modal" onClick={handleCloseModal}>
             <h1>User Details Modal</h1>
             <button className="openModal" onClick={handleOpenModal}>Open Form</button>
 
             {isModalOpen && (
-            <div className="Modal-content">
+            <div className="modal-content">
                   <form onSubmit={handleSubmit}>
                            <div className='open-modal'>   
-                     <label htmlFor="Username:">Username:</label>
-                            <input type="text" id="Username"  value={Username}    onChange={(e)=> setUsername(e.target.value)} required/>
+                     <label htmlFor="username:">Username:</label>
+                            <input type="text" id="username"  value={Username}    onChange={(e)=> setUsername(e.target.value)} required/>
                             </div> 
 
                             <div className='open-modal'> 
-                            <label htmlFor="Email ">Email Address:</label>
-                            <input type="email" id="Email" value={email}  onChange={(e)=> setEmail(e.target.value)} required/>
+                            <label htmlFor="email ">Email Address:</label>
+                            <input type="email" id="email" value={email}  onChange={(e)=> setEmail(e.target.value)} required/>
                             </div>
                                 
                             <div className='open-modal'> 
-                            <label htmlFor="Phone">Phone Number:</label>
-                            <input type="number" id="Phone" value={phone} onChange={(e)=> setPhone(e.target.value)} required/>
+                            <label htmlFor="phone">Phone Number:</label>
+                            <input type="number" id="phone" value={phone} onChange={(e)=> setPhone(e.target.value)} required/>
                                  </div>
                                
                                  <div className='open-modal'> 
-                            <label htmlFor="Date">Date of Birth:</label>
-                            <input type="date" id="Date" value= {dob} onChange={(e)=> setDob(e.target.value)} required/>
+                            <label htmlFor="dob">Date of Birth:</label>
+                            <input type="date" id="dob" value= {dob} onChange={(e)=> setDob(e.target.value)} required/>
 
                                 </div>
-                            <button type='submit'>Submit</button>
+                            <button className='submit-button'  type='submit'>Submit</button>
                   </form>
             </div>
             )}

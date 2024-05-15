@@ -1,4 +1,4 @@
-.Modal{
+.modal{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -11,7 +11,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.Modal-content{
+.modal-content{
     
     position: absolute;
     top: 30%;
@@ -37,4 +37,13 @@
 .open-modal input , label{
 
      padding:7px;
+}
+
+.submit-button{
+
+    padding: 10px;
+    border-radius: 8px;
+    border:none ;
+     background-color: lightblue;
+
 }
