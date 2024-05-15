@@ -75,7 +75,7 @@ const ModalDetail = () => {
 
   const validateDob = (dob) => {
     // Simple date validation (additional checks can be added)
-    return  Date.now() > dob; 
+    return  Date.now() < dob; 
   };
 
 
