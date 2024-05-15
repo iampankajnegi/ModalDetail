@@ -24,7 +24,7 @@ const ModalDetail = () => {
 
   const handleCloseModal= (e)=>{
 
-        if(e.target.className === "Modal"){
+        if(e.target.className === "modal"){
 
               closeModal();
         }
@@ -83,11 +83,12 @@ const ModalDetail = () => {
 
   return (
     <div>
-         <div className="modal" onClick={handleCloseModal}>
+         
             <h1>User Details Modal</h1>
             <button className="openModal" onClick={handleOpenModal}>Open Form</button>
 
             {isModalOpen && (
+              <div className="modal" onClick={handleCloseModal}>
             <div className="modal-content">
                   <form onSubmit={handleSubmit}>
                            <div className='open-modal'>   
@@ -113,9 +114,10 @@ const ModalDetail = () => {
                             <button className='submit-button'  type='submit'>Submit</button>
                   </form>
             </div>
+            </div>
             )}
 
-            </div>
+            
         
     </div>
   )
